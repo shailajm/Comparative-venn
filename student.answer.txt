@@ -1,0 +1,6 @@
+temperature and heat sensor can be used. 
+The sensor checks the level continously and send the information to the microprocessor.
+The signal is converted using ADC. The temperature level is checked and compared.
+Action is taken if the oxygen level is greater or lesser.
+sounds an alarm for safe fail.
+continously monitors the inputs and goes on till it is turned off.
