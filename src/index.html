@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Testing NLP</title>
+  </head>
+  <body>
+    Hello world!
+    <script src="lunr.min.js"></script>
+    <script>
+      var answerText = "";
+      var answers = lunr(function() {
+        this.ref("id")
+        this.field("content")
+      });
+      answers.add({id: 1, content: "Friction causes heat and might also lead to wear and tear."});
+      answers.add({id: 2, content: "A really bad answer with one keyword friction."});
+      console.log(answers.search("friction"));
+      console.log(answers.search("heat"));
+      console.log(answers.search("wearing"));
+      console.log(answers.search("wear"));
+      console.log(answers.search("tear"));
+    </script>
+  </body>
+</html>
